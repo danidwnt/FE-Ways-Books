@@ -11,6 +11,8 @@ import DetailBook from './page/DetailBook';
 import Keranjang from './page/Keranjang';
 import Complain from './page/Complain';
 import TransAdmin from './page/TransAdmin';
+import AddBook from './page/AddBook';
+import ComplainAdmin from './page/ComplainAdmin';
 
 
 // init token on axios every time the app is refreshed
@@ -67,6 +69,8 @@ function App() {
       <Route path="/keranjang" element={<Keranjang />} />
       <Route path="/Complain" element={<Complain />} />
       <Route path="/ListTrans" element={<TransAdmin/>} />
+      <Route path="/ComplainAdmin" element={<ComplainAdmin/>} />
+      <Route path="/AddBook" element={<AddBook/>} />
     </Routes >
   );
 }

@@ -24,7 +24,7 @@ export default function Contact({ dataContact, setContact, contact }) {
                         </ul>
                     </div> */}
 
-                    <div className="d-flex flex-row">
+                    <div className="d-flex flex-row" style= {{borderBottom : '2px solid #A7A5A5'}}>
                         <div className="px-3">
                             <img src={item.img} className="rounded-circle me-2 img-contact" alt={item.name} />
                         </div>

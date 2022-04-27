@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom'
 
 import Logo from '../assets/Logo.png'
 import Keranjang from '../assets/keranjang.png'
-import DropDown from '../assets/dropprofile.png'
+import DropDown from '../assets/admin11.png'
 
 import { BsPerson } from 'react-icons/bs'
 import { BiMessage } from 'react-icons/bi'
 import { GrLogout } from 'react-icons/gr'
 
 
-function NavbarUser() {
+function NavbarAdmin() {
     return (
         <div>
             <Navbar expand="lg mt-2">
                 <Container fluid>
                     <Navbar.Brand className='ps-5'>
-                        <Link to='/'>
+                        <Link to='/ListTrans'>
                             <img src={Logo} width="100%" className="d-inline-block align-top" alt="WaysBook" />
                         </Link>
                     </Navbar.Brand>
@@ -25,9 +25,6 @@ function NavbarUser() {
                     <Navbar.Collapse id="navbarScroll">
                         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
                         </Nav>
-                        <Link to='/keranjang'>
-                            <img src={Keranjang} alt="img keranjang" />
-                        </Link>
                         <NavDropdown style={{ width: '250px', textAlign: 'center' }} title={<img style={{ marginRight: '40px' }} src={DropDown} alt="profile" />} id="basic-nav-dropdown">
                             <div style={{ width: '250px', height: '180px' }}>
 
@@ -39,8 +36,8 @@ function NavbarUser() {
                                     lineHeight: '33px',
                                     padding: '5px 10px'
                                 }} >
-                                    <Link style={{ textDecoration: 'none', color: 'black' }} to='/profile'>
-                                        <BsPerson style={{ width: '50px', height: '30px' }} /> Profile
+                                    <Link style={{ textDecoration: 'none', color: 'black' }} to='/AddBook'>
+                                        <BsPerson style={{ width: '50px', height: '30px' }} /> Add Book
                                     </Link>
                                 </NavDropdown.Item>
 
@@ -55,7 +52,7 @@ function NavbarUser() {
                                     marginBottom: '20px'
 
                                 }}> 
-                                <Link style={{ textDecoration: 'none', color: 'black' }} to='/complain'>
+                                <Link style={{ textDecoration: 'none', color: 'black' }} to='/ComplainAdmin'>
                                     <BiMessage style={{ width: '50px', height: '30px' }} /> Complain
                                 </Link>
                                 </NavDropdown.Item>
@@ -83,4 +80,4 @@ function NavbarUser() {
     )
 }
 
-export default NavbarUser
+export default NavbarAdmin
