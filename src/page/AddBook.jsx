@@ -5,6 +5,9 @@ import { Container, Form, Button, Stack } from 'react-bootstrap';
 
 export default function AddBook() {
 
+    const title = "AddBook"
+    document.title = 'Ways Books | ' + title
+
   const [preview, setPreview] = useState(); //For image preview
 
   const [form, setForm] = useState({

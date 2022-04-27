@@ -9,6 +9,10 @@ import imgEmpty from '../assets/empty.svg';
 
 
 export default function TransAdmin() {
+  
+  const title = "List Transaction"
+  document.title = 'Ways Books | ' + title
+
     let products = [
         {
             id: 1,

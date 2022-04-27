@@ -8,6 +8,10 @@ import ImgTrans2 from '../assets/Rectangle1.png'
 import { BsTrash } from 'react-icons/bs'
 
 function Keranjang() {
+  
+  const title = "Keranjang"
+  document.title = 'Ways Books | ' + title
+
   return (
     <div>
       <NavbarUser />

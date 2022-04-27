@@ -9,8 +9,8 @@ export default function ComplainAdmin() {
 
   const [contact, setContact] = useState(null)
 
-  const title = "Complain"
-  document.title = 'Ways Books| ' + title
+  const title = "Complain-Admin"
+  document.title = 'Ways Books | ' + title
 
   const dataContactUser = [
     {

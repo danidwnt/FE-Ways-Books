@@ -8,6 +8,10 @@ import NavbarUser from '../components/NavbarUser';
 // import { UserContext } from '../context/userContext'
 
 function Home() {
+
+    
+    const title = "Home"
+    document.title = 'Ways Books | ' + title
     // const navigate = useNavigate();
     // const [, dispatch] = useContext(UserContext);
 

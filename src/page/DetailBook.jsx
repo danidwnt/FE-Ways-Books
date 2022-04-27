@@ -4,6 +4,10 @@ import NavbarUser from '../components/NavbarUser'
 import { Container, Button } from 'react-bootstrap'
 
 function DetailBook() {
+
+    const title = "DetailBook"
+    document.title = 'Ways Books | ' + title
+
     return (
         <div>
             <NavbarUser />

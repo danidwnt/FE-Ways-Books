@@ -5,6 +5,9 @@ import NavbarUser from '../components/NavbarUser'
 import ReadBook from '../components/content/ReadBook'
 
 function DownloadBook() {
+
+    const title = "DownloadBook"
+    document.title = 'Ways Books | ' + title
   return (
     <div>
       <NavbarUser />

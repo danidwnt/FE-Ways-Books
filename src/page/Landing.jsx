@@ -14,6 +14,11 @@ import CardSlide from '../components/content/CardSlide';
 
 
 const Landing = () => {
+
+    
+    const title = ""
+    document.title = 'Ways Books ' + title
+
     const navigate = useNavigate();
     const [state, dispatch] = useContext(UserContext);
     const [showRegister, setShowRegister] = useState(false);

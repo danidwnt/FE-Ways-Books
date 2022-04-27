@@ -13,6 +13,11 @@ import ListBook1 from '../assets/ListBook1.png'
 import ListBook2 from '../assets/Rectangle1.png'
 
 export default function Profile() {
+
+    
+    const title = "Profile"
+    document.title = 'Ways Books | ' + title
+
     return (
         <div>
             <Container fluid>

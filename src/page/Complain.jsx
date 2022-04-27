@@ -9,7 +9,7 @@ function Complain() {
     const [contact, setContact] = useState(null)
 
     const title = "Complain"
-    document.title = 'Ways Books| ' + title
+    document.title = 'Ways Books | ' + title
 
     const dataContact = [
         {
