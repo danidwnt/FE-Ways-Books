@@ -1,10 +1,9 @@
 import React from 'react'
-import { Container, Row, Col, Table, Button } from 'react-bootstrap';
-import ShowMoreText from 'react-show-more-text';
+import { Container, Row, Col, Table } from 'react-bootstrap';
 import rupiahFormat from 'rupiah-format';
 import NavbarAdmin from '../components/NavbarAdmin'
 
-import imgEmpty from '../assets/empty.svg';
+// import imgEmpty from '../assets/empty.svg';
 
 
 

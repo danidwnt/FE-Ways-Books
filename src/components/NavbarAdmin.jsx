@@ -3,7 +3,6 @@ import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 import Logo from '../assets/Logo.png'
-import Keranjang from '../assets/keranjang.png'
 import DropDown from '../assets/admin11.png'
 
 import { BsPerson } from 'react-icons/bs'

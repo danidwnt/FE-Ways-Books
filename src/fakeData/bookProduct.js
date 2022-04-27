@@ -1,36 +1,52 @@
 const dataProduct = [
     {
         id: 1,
-        name: 'Mouse',
-        price: '500000',
-        stock: 600,
-        url: 'https://images.unsplash.com/photo-1605773527852-c546a8584ea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80',
-        desc: 'Mouse Wireless Alytech AL - Y5D, hadir dengan desain 3 tombol mouse yang ringan dan mudah dibawa. Mouse ini menggunakan frekuensi radio 2.4GHz (bekerja hingga jarak 10m) dan fitur sensor canggih optik pelacakan dengan penerima USB yang kecil. Mouse ini didukung oleh 1x baterai AA (hingga 12 bulan hidup baterai). mendukung sistem operasi Windows 7,8, 10 keatas, Mac OS X 10.8 atau yang lebih baru dan sistem operasi Chrome OS.'
+        name: 'My Own Private Mr. Cool',
+        author : 'By. Indah Hanaco',
+        price: '300000',
+        image: 'https://images.unsplash.com/photo-1598618253208-d75408cee680?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
+        desc : '"Selama beberapa tahun belakangan, Mark Manson—melalui blognya yang sangat populer tel ...',
     },
     {
         id: 2,
-        name: 'Keyboard',
-        price: '700000',
-        stock: 300,
-        url: 'https://images.unsplash.com/photo-1573643808568-4a3c26f3a06b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGtleWJvYXJkfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-        desc: 'Mouse Wireless Alytech AL - Y5D, hadir dengan desain 3 tombol mouse yang ringan dan mudah dibawa. Mouse ini menggunakan frekuensi radio 2.4GHz (bekerja hingga jarak 10m) dan fitur sensor canggih optik pelacakan dengan penerima USB yang kecil. Mouse ini didukung oleh 1x baterai AA (hingga 12 bulan hidup baterai). mendukung sistem operasi Windows 7,8, 10 keatas, Mac OS X 10.8 atau yang lebih baru dan sistem operasi Chrome OS.'
+        name: 'My Own Private Mr. Cool',
+        author : 'By. Indah Hanaco',
+        price: '400000',
+        image: 'https://images.unsplash.com/photo-1555252586-d77e8c828e41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80',
+        desc : '"Selama beberapa tahun belakangan, Mark Manson—melalui blognya yang sangat populer tel ...',
     },
     {
         id: 3,
-        name: 'Monitor',
-        price: '2300000',
-        stock: 250,
-        url: 'https://images.unsplash.com/photo-1619953942547-233eab5a70d6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80',
-        desc: 'Mouse Wireless Alytech AL - Y5D, hadir dengan desain 3 tombol mouse yang ringan dan mudah dibawa. Mouse ini menggunakan frekuensi radio 2.4GHz (bekerja hingga jarak 10m) dan fitur sensor canggih optik pelacakan dengan penerima USB yang kecil. Mouse ini didukung oleh 1x baterai AA (hingga 12 bulan hidup baterai). mendukung sistem operasi Windows 7,8, 10 keatas, Mac OS X 10.8 atau yang lebih baru dan sistem operasi Chrome OS.'
+        name: 'My Own Private Mr. Cool',
+        author : 'By. Indah Hanaco',
+        price: '800000',
+        image: 'https://images.unsplash.com/photo-1513127696622-593a20aec127?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=463&q=80',
+        desc : '"Selama beberapa tahun belakangan, Mark Manson—melalui blognya yang sangat populer tel ...',
     },
     {
         id: 4,
-        name: 'Drone',
-        price: '9500000',
-        stock: 25,
-        url: 'https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGRyb25lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-        desc: 'Mouse Wireless Alytech AL - Y5D, hadir dengan desain 3 tombol mouse yang ringan dan mudah dibawa. Mouse ini menggunakan frekuensi radio 2.4GHz (bekerja hingga jarak 10m) dan fitur sensor canggih optik pelacakan dengan penerima USB yang kecil. Mouse ini didukung oleh 1x baterai AA (hingga 12 bulan hidup baterai). mendukung sistem operasi Windows 7,8, 10 keatas, Mac OS X 10.8 atau yang lebih baru dan sistem operasi Chrome OS.'
-    }
+        name: 'My Own Private Mr. Cool',
+        author : 'By. Indah Hanaco',
+        price: '200000',
+        image: 'https://images.unsplash.com/photo-1598618443855-232ee0f819f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=425&q=80',
+        desc : '"Selama beberapa tahun belakangan, Mark Manson—melalui blognya yang sangat populer tel ...',
+    },
+    {
+        id: 5,
+        name: 'My Own Private Mr. Cool',
+        author : 'By. Indah Hanaco',
+        price: '900000',
+        image: 'https://images.unsplash.com/photo-1590926239825-575071d62dc3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+        desc : '"Selama beberapa tahun belakangan, Mark Manson—melalui blognya yang sangat populer tel ...',
+    },
+    {
+        id: 6,
+        name: 'My Own Private Mr. Cool',
+        author : 'By. Indah Hanaco',
+        price: '700000',
+        image: 'https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80',
+        desc : '"Selama beberapa tahun belakangan, Mark Manson—melalui blognya yang sangat populer tel ...',
+    },
 ]
 
 export default dataProduct
