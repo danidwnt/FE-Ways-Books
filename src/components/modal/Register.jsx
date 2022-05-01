@@ -39,8 +39,10 @@ const Register = ({ toggle }) => {
             // Insert data user to database here ...
             const response = await API.post('/register', body, config)
 
+            // console.log(response)
+
             // Notification
-            if (response.data.status === "success") {
+            if (response.data.status === "success...") {
                 const alert = (
                     <Alert variant="success" className="py-1">
                         Success
@@ -107,10 +109,9 @@ const Register = ({ toggle }) => {
                 </Form.Group>
 
                 <div className="d-grid gap-2 mb-3">
-                <Link to='/ListTrans'> 
+
                     <Button style={{ height: '50px', width : '100%' }} variant='dark'
                         type="submit">Sign Up</Button>
-                </Link>
                 </div>
 
                 <Form.Group className="mb-3 mb-3 text-center">

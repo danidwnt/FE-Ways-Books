@@ -1,17 +1,31 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col, Card } from "react-bootstrap";
 // import { Link } from 'react-router-dom'
+import convertRupiah from "rupiah-format";
 
-import CardBook from '../card/CardBook'
+// import bookProduct from '../../fakeData/bookProduct'
 
-function ListBook() {
+function ListBook({ item }) {
+
   return (
-    <div>
-      <Container style= {{height : '600px'}}>  
-            <h1 style={{marginBottom : '40px'}}> List Book </h1>
-        <CardBook />
-      </Container>
-    </div>
+      <Card style={{ width: '15rem', height :'470px'}}>
+        <Card.Img style={{
+          height: '300px'
+        }} variant="top" src={item.thumbnail} />
+        <Card.Body>
+          <Card.Title style={{ fontSize: '20px', fontFamily: 'Times New Roman', fontWeight: '700',height :'60px' }}>
+            {item.title}
+          </Card.Title>
+          <Card.Text>
+            <i className="text-muted" style={{ fontSize: '16px', fontWeight: '400' }}>
+              {item.author}
+            </i>
+          </Card.Text>
+          <Card.Title style={{ color: '#44B200' }}>
+            {convertRupiah.convert(item.price)}
+          </Card.Title>
+        </Card.Body>
+      </Card>
   )
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext }  from 'react'
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
@@ -10,8 +10,21 @@ import { BsPerson } from 'react-icons/bs'
 import { BiMessage } from 'react-icons/bi'
 import { GrLogout } from 'react-icons/gr'
 
+import { Outlet, useNavigate } from 'react-router-dom'
+import { UserContext } from '../context/userContext'
+
 
 function NavbarUser() {
+    const navigate = useNavigate();
+    const [, dispatch] = useContext(UserContext);
+
+    const handleLogout = () => {
+        dispatch({
+            type: "logout",
+        });
+        navigate('/landing')
+    };
+
     return (
         <div>
             <Navbar expand="lg mt-2">
@@ -60,7 +73,7 @@ function NavbarUser() {
                                 </Link>
                                 </NavDropdown.Item>
                                 <NavDropdown.Divider style={{ height: '2px' }} />
-                                <NavDropdown.Item style={{
+                                <NavDropdown.Item onClick={handleLogout} style={{
                                     height: '50px',
                                     fontStyle: 'normal',
                                     fontWeight: '600',
@@ -69,10 +82,10 @@ function NavbarUser() {
                                     padding: '5px 15px'
 
                                 }} >
-                                    <Link style={{ textDecoration: 'none', color: 'black' }} to='/landing'>
+                                    
                                         <GrLogout style={{ width: '50px', height: '30px', color: 'red' }} />
                                         Logout
-                                    </Link>
+                                    
                                 </NavDropdown.Item>
                             </div>
                         </NavDropdown>

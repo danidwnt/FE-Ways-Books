@@ -7,6 +7,7 @@ import convertRupiah from "rupiah-format";
 import bookProduct from '../../fakeData/bookProduct'
 
 export default class MultipleItems extends Component {
+
     render() {
         var settings = {
             dots: true,

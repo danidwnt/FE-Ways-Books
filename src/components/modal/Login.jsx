@@ -1,73 +1,80 @@
 import React, { useContext, useState } from 'react'
 import { Form, Button, Alert, Modal } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { API, setAuthToken } from '../../config/api'
 import { UserContext } from '../../context/userContext'
 
 const Login = ({ toggle }) => {
 
+    const navigate = useNavigate();
+
     const [, dispatch] = useContext(UserContext);
     const [message, setMessage] = useState(null);
-    const [login, setLogin] = useState({
+    const [form, setForm] = useState({
         email: "",
         password: "",
-    })
+      });
 
-    const { email, password } = login;
+    const { email, password } = form;
 
     const handleChange = (e) => {
-        setLogin({
-            ...login,
+        setForm({
+            ...form,
             [e.target.name]: e.target.value,
-        })
+          });
     }
 
     const handleSubmit = async (e) => {
         try {
             e.preventDefault();
-
+      
             // Create Configuration Content-type here ...
             // Content-type: application/json
             const config = {
-                headers: {
-                    "Content-type": "application/json"
-                }
-            }
-
+              headers: {
+                "Content-type": "application/json",
+              },
+            };
+      
             // Convert form data to string here ...
-            const body = JSON.stringify(login)
-
+            const body = JSON.stringify(form);
+      
             // Insert data user for login process here ...
             const response = await API.post('/login', body, config)
-            // console.log(response)
+            console.log(response);
 
-            setAuthToken(response.data.data.token);
-            // console.log(response.data.data);
-
-            dispatch({
+      
+            // Checking process
+            if (response?.status == 200) {
+              // Send data to useContext
+              dispatch({
                 type: "login",
                 payload: response.data.data,
-            });
-
-            // Checking process
-            if (response?.status === 200) {
-
-                const alert = (
-                    <Alert variant="success" className="py-1">
-                        Login success
-                    </Alert>
-                );
-                setMessage(alert);
-            }
-        } catch (error) {
-            const alert = (
-                <Alert variant="danger" className="py-1">
-                    Login failed
+              });
+      
+              // Status check
+              if (response.data.data.status == "admin") {
+                navigate("/ListTrans");
+              } else {
+                navigate("/");
+              }
+      
+              const alert = (
+                <Alert variant="success" className="py-1">
+                  Login success
                 </Alert>
+              );
+              setMessage(alert);
+            }
+          } catch (error) {
+            const alert = (
+              <Alert variant="danger" className="py-1">
+                Login failed
+              </Alert>
             );
             setMessage(alert);
             console.log(error);
-        }
+          }
     };
 
     return (
@@ -98,9 +105,8 @@ const Login = ({ toggle }) => {
                     />
                 </Form.Group>
                 <div className="d-grid gap-2 mb-3">
-                    <Link to='/'>       
+
                     <Button variant='dark' style={{ height: '50px', width : '100%' }} type='submit' >Login</Button>
-                    </Link>
                 </div>
                 <Form.Group className="mb-3 text-center">
                     <Form.Text style={{ color: 'black', fontSize: '18px' }}>Don't have an account ? Klik {" "}

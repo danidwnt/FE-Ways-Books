@@ -5,8 +5,8 @@ import Profile from './page/Profile'
 import DownloadBook from './page/DownloadBook';
 import Home from './page/Home'
 
-// import { UserContext } from './context/userContext'
-// import { API, setAuthToken } from './config/api'
+import { UserContext } from './context/userContext'
+import { API, setAuthToken } from './config/api'
 import DetailBook from './page/DetailBook';
 import Keranjang from './page/Keranjang';
 import Complain from './page/Complain';
@@ -16,48 +16,48 @@ import ComplainAdmin from './page/ComplainAdmin';
 
 
 // init token on axios every time the app is refreshed
-// if (localStorage.token) {
-//   setAuthToken(localStorage.token);
-// }
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 
 function App() {
-  // const navigate = useNavigate();
-  // const [state, dispatch] = useContext(UserContext);
+  const navigate = useNavigate();
+  const [state, dispatch] = useContext(UserContext);
 
-  // useEffect(() => {
-  //   if (localStorage.token) {
-  //     setAuthToken(localStorage.token);
-  //   } else {
-  //     navigate('/landing')
-  //   }
-  // }, [state]);
+  useEffect(() => {
+    if (localStorage.token) {
+      setAuthToken(localStorage.token);
+    } else {
+      navigate('/landing')
+    }
+  }, [state]);
 
-  // const checkUser = async () => {
-  //   try {
-  //     const response = await API.get("/check-auth");
+  const checkUser = async () => {
+    try {
+      const response = await API.get("/check-auth");
 
-  //     if (response.status === 404) {
-  //       return dispatch({
-  //         type: "failed",
-  //       });
-  //     }
+      if (response.status === 404) {
+        return dispatch({
+          type: "failed",
+        });
+      }
 
-  //     let payload = response.data.data.user;
-  //     payload.token = localStorage.token;
+      let payload = response.data.data.user;
+      payload.token = localStorage.token;
 
-  //     // Send data to useContext
-  //     dispatch({
-  //       type: "success",
-  //       payload,
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+      // Send data to useContext
+      dispatch({
+        type: "success",
+        payload,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  // useEffect(() => {
-  //   checkUser();
-  // }, []);
+  useEffect(() => {
+    checkUser();
+  }, []);
 
   return (
     <Routes>
